@@ -39,7 +39,7 @@ const MORSE_TABLE = {
 
 function decode(expr) {
     let exprSplitted = expr.match(/.{1,10}/g);
-    exprSplitted = exprSplitted.map(x => x.replace(/^0+/, '')).map(x => x.replace('**********', ' ')).map(x => x.replaceAll(/10/g, '.')).map(x => x.replaceAll(/11/g, '-'));
+    exprSplitted = exprSplitted.map(x => x.replace(/^0+/, '')).map(x => x.replace('**********', ' ')).map(x => x.replace(/10/g, '.')).map(x => x.replace(/11/g, '-'));
 
     let decodedExpr = exprSplitted.map(x => {
         if(x === ' ') { return " "}
